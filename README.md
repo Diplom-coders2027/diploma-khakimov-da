@@ -13,17 +13,17 @@
 | Параметр | Значение |
 | :--- | :--- |
 | **Тема проекта** | *Разработка программного комплекса для...* |
-| **Студент** | Фамилия Имя Отчество |
-| **Курс / Группа** | 3 курс / 5 курс, Группа XXX |
-| **Преподаватель** | Фамилия Имя Отчество |
+| **Студент** | Хакимов Данил Алексеевич |
+| **Курс / Группа** | 3 курс, КК1 |
+| **Преподаватель** | Ярош Павел Владимирович |
 | **Учебный год** | 2026 / 2027 |
 
 ---
 
 ## 🛠 Технологический стек
 
-- **Backend:** `Language / Framework` (например, Python / FastAPI, Go, Java / Spring Boot, C++ / Qt)
-- **Frontend:** `Framework / Library` (например, TypeScript / React, Vue, Desktop UI)
+- **Backend:** JavaScript/NodeJs
+- **Frontend:** JavaScript, html, CSS
 - **База данных:** `Database` (например, PostgreSQL, Redis, ClickHouse)
 - **Инфраструктура / CI/CD:** Docker, Docker Compose, GitHub Actions
 - **Документация:** Markdown / LaTeX / Typst, PlantUML / Mermaid / draw.io
