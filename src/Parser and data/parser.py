@@ -7,7 +7,33 @@ import time
 url = "https://www.thefinals.wiki/wiki/Gadgets"  # та, что открыта у тебя в браузере
 headers = {"User-Agent": "Mozilla/5.0"}
 
-html = requests.get(url, headers=headers).text
+def get_page(url, headers, retries=3, delay=2):
+    """Скачивает страницу. Возвращает HTML или None, если не удалось."""
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.get(url, headers=headers, timeout=10)
+
+            if response.status_code == 404:
+                print(f"404: страница не найдена -> {url}")
+                return None                      # повторять нет смысла
+
+            response.raise_for_status()          # 500 и другие ошибки -> исключение
+            return response.text                 # всё хорошо
+
+        except requests.exceptions.HTTPError as e:
+            print(f"Ошибка сервера ({e}), попытка {attempt}/{retries}")
+        except requests.exceptions.RequestException as e:
+            print(f"Проблема соединения ({e}), попытка {attempt}/{retries}")
+
+        time.sleep(delay * attempt)              # ждём всё дольше: 2с, 4с, 6с
+
+    print(f"Не удалось загрузить: {url}")
+    return None
+
+html = get_page(url, headers)
+if html is None:
+    raise SystemExit("Не удалось загрузить главную страницу, выходим")
+
 soup = BeautifulSoup(html, "html.parser")
 
 weapons = []
@@ -27,13 +53,6 @@ for a in soup.select("a[title]:has(img.mw-file-element)"):
 
 for w in weapons:
     print(w["name"], "-", w["link"])
-
-print("Всего:", len(weapons))
-
-with open("Gadgets.csv", "w", newline="", encoding="utf-8-sig") as f:
-    writer = csv.DictWriter(f, fieldnames=["name", "link", "image"])
-    writer.writeheader()
-    writer.writerows(weapons)
 
 def parse_stats(soup):
     stats = {}
@@ -56,11 +75,15 @@ def parse_stats(soup):
     return stats
 
 for w in weapons:
-    page = requests.get(w["link"], headers=headers)
-    page_soup = BeautifulSoup(page.text, "html.parser")
+    page_html = get_page(w["link"], headers)
+    if page_html is None:
+        print("Пропускаем:", w["name"])
+        continue                                  # переходим к следующему гаджету
+
+    page_soup = BeautifulSoup(page_html, "html.parser")
     w.update(parse_stats(page_soup))
     print("Готово:", w["name"])
-    time.sleep(1)  # не нагружаем сайт
+    time.sleep(1)
 
 # у разных оружий могут быть разные характеристики, собираем все колонки
 fieldnames = []
@@ -72,4 +95,6 @@ for w in weapons:
 with open("Gadgets.csv", "w", newline="", encoding="utf-8-sig") as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames, restval="")
     writer.writeheader()
-    writer.writerows(weapons)    
+    writer.writerows(weapons) 
+
+print("Всего:", len(weapons))       
