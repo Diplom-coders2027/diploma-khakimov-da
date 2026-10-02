@@ -66,7 +66,7 @@ def parse_stats(soup):
 
         # в Build лежит значок "L" + ссылка "Light", нам нужна только ссылка
         if key == "Build" and td.find("a"):
-            value = td.find("a").get_text(strip=True)
+            value = ", ".join(a.get_text(strip=True) for a in td.find_all("a"))
         else:
             value = td.get_text(" ", strip=True)
 
