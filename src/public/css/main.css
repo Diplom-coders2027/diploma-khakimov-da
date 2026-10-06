@@ -1,0 +1,42 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 32px;
+    background: black;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    height: 15px;
+}
+
+
+body{
+    margin: 0;
+    background-color: #d21f3c;
+    font-weight: bold;
+    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-style:italic;
+    margin-left: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #d21f3c;
+}
+
+.logo{
+  height: 15px;
+  width: auto;
+  display: block;
+}
