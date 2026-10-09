@@ -29,9 +29,30 @@ nav a{
     font-size: 20px;
     transition: color 0.3s ease;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 nav a:hover{
+    color: #d21f3c;
+}
+
+.dropdown_toggle{
+    background: none;
+    color: white;
+    border: none;
+    padding: 0;
+    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;  /* тот же шрифт, что у ссылок */
+    font-style:italic;
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+.dropdown_toggle:hover {
     color: #d21f3c;
 }
 
@@ -39,4 +60,39 @@ nav a:hover{
   height: 15px;
   width: auto;
   display: block;
+}
+
+.dropdown {
+  position: relative;          /* точка отсчёта для меню */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;          /* вынимаем из потока, кнопка не двигается */
+  top: calc(100% + 12px);      /* чуть ниже кнопки, подгони под себя */
+  left: 15px;                  /* выровнять по тексту кнопки (у неё margin-left: 15px) */
+  min-width: 180px;
+  background: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;              /* ссылки друг под другом */
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #d21f3c;
 }
