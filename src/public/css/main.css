@@ -72,7 +72,10 @@ nav a:hover,
   top: calc(100% + 12px);      /* чуть ниже кнопки, подгони под себя */
   left: 15px;                  /* выровнять по тексту кнопки (у неё margin-left: 15px) */
   min-width: 180px;
-  background: black;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2 4 black;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 100;
 }

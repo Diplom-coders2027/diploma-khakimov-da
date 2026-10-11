@@ -14,8 +14,16 @@ app.get('/calculator', (req,res) => {
     res.render('calculator')
 })
 
-app.get('/loadout', (req,res) => {
-    res.render('loadout')
+app.get('/weapons', (req,res) => {
+    res.render('weapons')
+})
+
+app.get('/gadgets', (req,res) => {
+    res.render('gadgets')
+})
+
+app.get('/specializations', (req,res) => {
+    res.render('specializations')
 })
 
 
