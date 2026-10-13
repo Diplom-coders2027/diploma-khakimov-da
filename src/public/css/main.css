@@ -1,0 +1,101 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 32px;
+    background: black;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    height: 15px;
+}
+
+
+body{
+    margin: 0;
+    background-color: #d21f3c;
+    font-weight: bold;
+    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-style:italic;
+    margin-left: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: #d21f3c;
+}
+
+.dropdown_toggle{
+    background: none;
+    color: white;
+    border: none;
+    padding: 0;
+    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;  /* тот же шрифт, что у ссылок */
+    font-style:italic;
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+.dropdown_toggle:hover {
+    color: #d21f3c;
+}
+
+.logo{
+  height: 15px;
+  width: auto;
+  display: block;
+}
+
+.dropdown {
+  position: relative;          /* точка отсчёта для меню */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;          /* вынимаем из потока, кнопка не двигается */
+  top: calc(100% + 12px);      /* чуть ниже кнопки, подгони под себя */
+  left: 15px;                  /* выровнять по тексту кнопки (у неё margin-left: 15px) */
+  min-width: 180px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2 4 black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;              /* ссылки друг под другом */
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #d21f3c;
+}
