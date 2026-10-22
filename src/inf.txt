@@ -1,2 +1,0 @@
-Backforund colors: #d21f3c, #ffff
-font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;"

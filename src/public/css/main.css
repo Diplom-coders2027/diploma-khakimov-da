@@ -1,80 +1,82 @@
-header{
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 16px 32px;
-    background: black;
-    color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    height: 15px;
+:root {
+  --header-pad-y: 12px;
+  --header-pad-x: 32px;
+  --nav-gap: 24px;
+  --nav-font: 22px;
+  --logo-h: 22px;
+  --img-h: 60px;
 }
 
-
-body{
-    margin: 0;
-    background-color: #d21f3c;
-    font-weight: bold;
-    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
+body {
+  margin: 0;
+  background-color: #d21f3c;
+  font-weight: bold;
+  font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    font-style:italic;
-    margin-left: 15px;
-    font-size: 20px;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    cursor: pointer;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--nav-gap);
+  /* на очень широких экранах контент ограничивается ~1400px по центру */
+  padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
+  background: black;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
 
-nav a:hover{
-    color: #d21f3c;
+.logo-link {
+  display: flex;               /* убирает лишний отступ под картинкой */
 }
 
-.dropdown_toggle{
-    background: none;
-    color: white;
-    border: none;
-    padding: 0;
-    font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;  /* тот же шрифт, что у ссылок */
-    font-style:italic;
-    font-weight: bold;
-    margin-left: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-}
-
-nav a:hover,
-.dropdown_toggle:hover {
-    color: #d21f3c;
-}
-
-.logo{
-  height: 15px;
+.logo {
+  height: var(--logo-h);
   width: auto;
   display: block;
 }
 
+nav a,
+.dropdown_toggle {
+  text-decoration: none;
+  color: white;
+  font-family: inherit;
+  font-style: italic;
+  font-weight: bold;
+  font-size: var(--nav-font);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+ 
+.dropdown_toggle {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+nav a:hover,
+.dropdown_toggle:hover {
+  color: #d21f3c;
+}
+
 .dropdown {
-  position: relative;          /* точка отсчёта для меню */
+  position: relative;
 }
 
 .dropdown-menu {
   display: none;
-  position: absolute;          /* вынимаем из потока, кнопка не двигается */
-  top: calc(100% + 12px);      /* чуть ниже кнопки, подгони под себя */
-  left: 15px;                  /* выровнять по тексту кнопки (у неё margin-left: 15px) */
+  position: absolute;
+  top: calc(100% + 12px + var(--header-pad-y));
+  left: 0;                     /* margin-left у кнопки больше нет */
   min-width: 180px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2 4 black;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 100;
@@ -85,12 +87,12 @@ nav a:hover,
 }
 
 .dropdown-menu a {
-  display: block;              /* ссылки друг под другом */
+  display: block;
   padding: 10px 16px;
   color: white;
   text-decoration: none;
   font-style: italic;
-  font-size: 20px;
+  font-size: var(--nav-font);
   text-transform: uppercase;
   white-space: nowrap;
   transition: color 0.3s ease;
@@ -98,4 +100,42 @@ nav a:hover,
 
 .dropdown-menu a:hover {
   color: #d21f3c;
+}
+
+.light_weapons img{
+  border-radius: 5px;
+  height: var(--img-h);
+  transition: transform 0.5 ease-out;
+}
+
+.light_weapons img:hover{
+  transform: scale(1.1);
+}
+
+/* ===== Большие мониторы (от 1920px) ===== */
+@media (min-width: 1920px) {
+  :root {
+    --nav-font: 22px;
+    --logo-h: 24px;
+    --nav-gap: 28px;
+  }
+}
+
+/* ===== Ноутбуки (до 1200px) ===== */
+@media (max-width: 1200px) {
+  :root {
+    --header-pad-x: 24px;
+    --nav-gap: 20px;
+  }
+}
+
+/* ===== Планшеты (до 992px) ===== */
+@media (max-width: 992px) {
+  :root {
+    --header-pad-y: 14px;
+    --header-pad-x: 20px;
+    --nav-gap: 16px;
+    --nav-font: 18px;
+    --logo-h: 20px;
+  }
 }

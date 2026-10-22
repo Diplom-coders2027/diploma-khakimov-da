@@ -1,4 +1,6 @@
 const express = require('express')
+const path = require('path')
+const fs = require('fs/promises')
 const app = express()
 const PORT = 5000
 
@@ -10,23 +12,30 @@ app.get('/', (req,res) => {
     res.render('index')
 })
 
-app.get('/calculator', (req,res) => {
-    res.render('calculator')
+const DATA_DIR = path.join(__dirname, 'data');
+
+async function loadJson(fileName) {
+  const raw = await fs.readFile(path.join(DATA_DIR, fileName), 'utf-8');
+  return JSON.parse(raw);
+}
+
+app.get('/weapons', async (req, res, next) => {
+  try {
+    const [heavy, light, medium] = await Promise.all([
+      loadJson('heavy.json'),
+      loadJson('light.json'),
+      loadJson('medium.json'),
+    ]);
+
+    res.render('weapons', {heavy, light, medium});
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.get('/about', (req,res) => {
+    res.render('about-us')
 })
-
-app.get('/weapons', (req,res) => {
-    res.render('weapons')
-})
-
-app.get('/gadgets', (req,res) => {
-    res.render('gadgets')
-})
-
-app.get('/specializations', (req,res) => {
-    res.render('specializations')
-})
-
-
 
 app.listen(PORT, () => {
     console.log(`Server started: http://localhost:${PORT}`)

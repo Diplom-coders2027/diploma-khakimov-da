@@ -12,5 +12,18 @@
 </head>
 <body>
     <%- include('blocks/header') -%>
+
+    <h2><%= light.class %></h2>
+    <div class="grid">
+        <ul class = "light_weapons">
+            <% light.weapons.forEach(w => { %>
+                <li>
+                    <a href="/<%= w.name %>">
+                        <img src="<%= w.image %>" alt="<%= w.name %>">
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
 </body>
 </html>

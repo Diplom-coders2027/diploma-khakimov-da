@@ -1,0 +1,520 @@
+{
+  "class": "light",
+  "weapons": [
+    {
+      "name": "93R",
+      "link": "https://www.thefinals.wiki/wiki/93R",
+      "image": "https://www.thefinals.wiki/w/images/thumb/3/3d/93R_Rank_1.png/100px-93R_Rank_1.png.webp",
+      "description": "Burst-fire machine pistol",
+      "type": "Handgun",
+      "unlock": 500,
+      "stats": {
+        "body": 24,
+        "head": "36 (1.5×)",
+        "environmental": 7,
+        "min_range": "30m",
+        "max_range": "37.5m",
+        "multiplier": 0.5,
+        "rpm": "210｜1000",
+        "magazine": 27,
+        "empty_reload": "1.75s",
+        "tactical_reload": "1.45s"
+      }
+    },
+    {
+      "name": "ARN-220",
+      "link": "https://www.thefinals.wiki/wiki/ARN-220",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/e0/ARN-220_Rank_1.png/100px-ARN-220_Rank_1.png.webp",
+      "description": "A tactical assault rifle with coupled mags for quick swaps in the heat of combat.",
+      "type": "Assault Rifle",
+      "unlock": 500,
+      "stats": {
+        "body": 17,
+        "head": "25.5 (1.5×)",
+        "environmental": 3.5,
+        "min_range": "37.5m",
+        "max_range": "42.5m",
+        "multiplier": 0.72,
+        "rpm": 750,
+        "magazine": "30×2",
+        "empty_reload": "Full reload - 2.7s Magazine swap - 0.66s",
+        "tactical_reload": "2.45s"
+      }
+    },
+    {
+      "name": "Dagger",
+      "link": "https://www.thefinals.wiki/wiki/Dagger",
+      "image": "https://www.thefinals.wiki/w/images/thumb/8/86/Dagger_Rank_1.png/100px-Dagger_Rank_1.png.webp",
+      "description": "Close-range melee weapon for fast single strikes. Use the secondary backstab attack to deal high damage when hitting an enemy from behind.",
+      "type": "Melee",
+      "unlock": 500,
+      "stats": {
+        "environmental": 33,
+        "primary_attack": "Precise - 70 Glancing blow - 49",
+        "alt_attack": "Precise - 85 Backstab - 340",
+        "lunge_distance": "5m",
+        "precision_zone": "9°",
+        "environmental_alt_fire": 33
+      }
+    },
+    {
+      "name": "LH1",
+      "link": "https://www.thefinals.wiki/wiki/LH1",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/e2/LH1_Rank_1.png/100px-LH1_Rank_1.png.webp",
+      "description": "Semi-automatic battle rifle.",
+      "type": "Marksman Rifle",
+      "unlock": 500,
+      "stats": {
+        "body": 44,
+        "head": "88 (2.0×)",
+        "environmental": 14,
+        "min_range": "50m",
+        "max_range": "55m",
+        "multiplier": 0.75,
+        "rpm": 270,
+        "magazine": 15,
+        "empty_reload": "2.85s",
+        "tactical_reload": "1.95s"
+      }
+    },
+    {
+      "name": "M11",
+      "link": "https://www.thefinals.wiki/wiki/M11",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/c3/M11_Rank_1.png/100px-M11_Rank_1.png.webp",
+      "description": "Fast-firing, fully automatic machine pistol",
+      "type": "SMG",
+      "unlock": "Duelist",
+      "stats": {
+        "body": 16,
+        "head": 24,
+        "environmental": 5,
+        "min_range": "10m",
+        "max_range": "20m",
+        "multiplier": 0.45,
+        "rpm": 1000,
+        "magazine": 40,
+        "empty_reload": "1.85s",
+        "tactical_reload": "1.55s"
+      }
+    },
+    {
+      "name": "M26 Matter",
+      "link": "https://www.thefinals.wiki/wiki/M26_Matter",
+      "image": "https://www.thefinals.wiki/w/images/thumb/3/3c/M26_Matter_Rank_1.png/100px-M26_Matter_Rank_1.png.webp",
+      "description": "A light and compact pump-action shotgun that uses box magazines.",
+      "type": "Shotgun",
+      "unlock": 500,
+      "stats": {
+        "body": "11×11 (Max - 121)",
+        "environmental": "9×11 (Max - 99)",
+        "min_range": "15m",
+        "max_range": "25m",
+        "multiplier": 0.65,
+        "rpm": 84,
+        "magazine": 8,
+        "empty_reload": "2.45s",
+        "tactical_reload": "2.05s"
+      }
+    },
+    {
+      "name": "Recurve Bow",
+      "link": "https://www.thefinals.wiki/wiki/Recurve_Bow",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/7f/Recurve_Bow_Rank_1.png/100px-Recurve_Bow_Rank_1.png.webp",
+      "description": "Shoots arrows in a curved arc; the arrows' effective range and damage will increase the further back the bowstring is drawn",
+      "type": "Marksman Rifle",
+      "unlock": 500,
+      "stats": {
+        "body": 60,
+        "head": "90 (1.5×)",
+        "environmental": 12.125,
+        "rpm": "78丨48",
+        "magazine": "∞",
+        "empty_reload": "0.75s",
+        "environmental_alt_fire": "Max Draw - 25",
+        "alt_fire_body": "Max Draw - 126",
+        "alt_fire_head": "Max Draw - 189 (1.5×)"
+      }
+    },
+    {
+      "name": "SH1900",
+      "link": "https://www.thefinals.wiki/wiki/SH1900",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a2/SH1900_Rank_1.png/100px-SH1900_Rank_1.png.webp",
+      "description": "Double-barrel shotgun with a wide spread",
+      "type": "Shotgun",
+      "unlock": 500,
+      "stats": {
+        "body": "12×15 (Max - 180)",
+        "environmental": "6×15",
+        "min_range": "10m",
+        "max_range": "15m",
+        "multiplier": 0.62,
+        "rpm": 80,
+        "magazine": 2,
+        "empty_reload": "2.60s",
+        "tactical_reload": "2.20s"
+      }
+    },
+    {
+      "name": "SR-84",
+      "link": "https://www.thefinals.wiki/wiki/SR-84",
+      "image": "https://www.thefinals.wiki/w/images/thumb/0/0f/SR-84_Rank_1.png/100px-SR-84_Rank_1.png.webp",
+      "description": "Bolt-action sniper rifle",
+      "type": "Marksman Rifle",
+      "unlock": "Free",
+      "stats": {
+        "body": 118,
+        "head": 236,
+        "environmental": 27,
+        "min_range": "80m",
+        "max_range": "100m",
+        "multiplier": 0.75,
+        "rpm": 45,
+        "magazine": 6,
+        "empty_reload": 3.35,
+        "tactical_reload": 1.95
+      }
+    },
+    {
+      "name": "Sword",
+      "link": "https://www.thefinals.wiki/wiki/Sword",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/cf/Sword_Rank_1.png/100px-Sword_Rank_1.png.webp",
+      "description": "Melee weapon built for precise attacks and high damage. Can perform a secondary lunge attack to quickly close distance and strike targets.",
+      "type": "Melee",
+      "unlock": "Free",
+      "stats": {
+        "environmental": 33,
+        "primary_attack": "Precise - 110 Glancing blow - 71.5",
+        "alt_attack": "Precise - 120 Glancing blow - 78",
+        "lunge_distance": "4.25m",
+        "precision_zone": "9°",
+        "environmental_alt_fire": 33
+      }
+    },
+    {
+      "name": "Throwing Knives",
+      "link": "https://www.thefinals.wiki/wiki/Throwing_Knives",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/ab/Throwing_Knives_Rank_1.png/100px-Throwing_Knives_Rank_1.png.webp",
+      "description": "A set of silent projectiles that can be thrown in short bursts; can also be thrown in pairs",
+      "type": "Miscellaneous",
+      "unlock": "Assassin",
+      "stats": {
+        "body": 60,
+        "head": 90,
+        "environmental": 20,
+        "rpm": "89丨545.45丨27.7",
+        "magazine": "∞",
+        "environmental_alt_fire": 40,
+        "alt_fire_body": 140,
+        "alt_fire_head": 210
+      }
+    },
+    {
+      "name": "V9S",
+      "link": "https://www.thefinals.wiki/wiki/V9S",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/7f/V9S_Rank_1.png/100px-V9S_Rank_1.png.webp",
+      "description": "Semi-automatic pistol",
+      "type": "Handgun",
+      "unlock": "Free",
+      "stats": {
+        "body": 38,
+        "head": 57,
+        "environmental": 8,
+        "min_range": "15m",
+        "max_range": "20m",
+        "multiplier": 0.65,
+        "rpm": 360,
+        "magazine": 18,
+        "empty_reload": "1.50s",
+        "tactical_reload": "1.25s"
+      }
+    },
+    {
+      "name": "XP-54",
+      "link": "https://www.thefinals.wiki/wiki/XP-54",
+      "image": "https://www.thefinals.wiki/w/images/thumb/f/f0/XP-54_Rank_1.png/100px-XP-54_Rank_1.png.webp",
+      "description": "Tactical submachine gun",
+      "type": "SMG",
+      "unlock": "Free",
+      "stats": {
+        "body": 16,
+        "head": 24,
+        "environmental": 8,
+        "min_range": "22.5m",
+        "max_range": "32.5m",
+        "multiplier": 0.52,
+        "rpm": 880,
+        "magazine": 36,
+        "empty_reload": "2.50s",
+        "tactical_reload": "2.25s"
+      }
+    }
+  ],
+  "gadgets": [
+    {
+      "name": "Breach Charge",
+      "link": "https://www.thefinals.wiki/wiki/Breach_Charge",
+      "image": "https://www.thefinals.wiki/w/images/thumb/f/fc/Breach_Charge_Rank_1.png/100px-Breach_Charge_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Assassin",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 3,
+        "damage": 80,
+        "environment_dmg": "Over 2000",
+        "damage_radius": "2.5m",
+        "priming_time": "1s",
+        "max_deployed": 3,
+        "health": 25
+      }
+    },
+    {
+      "name": "Gateway",
+      "link": "https://www.thefinals.wiki/wiki/Gateway",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/c4/Gateway_Rank_1.png/100px-Gateway_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "40s",
+        "ammo": 2,
+        "max_range": "50m",
+        "duration": "20s"
+      }
+    },
+    {
+      "name": "Glitch Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Glitch_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/b/b5/Glitch_Grenade_Rank_1.png/100px-Glitch_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Duelist",
+      "stats": {
+        "cooldown": "25s",
+        "ammo": 2,
+        "priming_time": "1.5s",
+        "duration": "5s"
+      }
+    },
+    {
+      "name": "Gravity Vortex",
+      "link": "https://www.thefinals.wiki/wiki/Gravity_Vortex",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/d6/Gravity_Vortex_Rank_1.png/100px-Gravity_Vortex_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 1,
+        "health": 60,
+        "duration": "Min - 7s Max - 10s"
+      }
+    },
+    {
+      "name": "Infuser",
+      "link": "https://www.thefinals.wiki/wiki/Infuser",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/ad/HPlus_Infuser_Rank_1.png/100px-HPlus_Infuser_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "Starts recharging - 10s Fully recharged - 12s",
+        "ammo": 20,
+        "environment_dmg": 1,
+        "rpm": 800,
+        "healing": "Per shot - 11 Full magazine - 220"
+      }
+    },
+    {
+      "name": "Sonar Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Sonar_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/ca/Sonar_Grenade_Rank_1.png/100px-Sonar_Grenade_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Scout",
+      "stats": {
+        "cooldown": "34s",
+        "ammo": 2,
+        "health": 25,
+        "duration": "5.25s",
+        "radius": "12m"
+      }
+    },
+    {
+      "name": "Nullifier",
+      "link": "https://www.thefinals.wiki/wiki/Nullifier",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/96/Nullifier_Rank_1.png/100px-Nullifier_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Duelist",
+      "stats": {
+        "cooldown": "18s Reload - 1.9s",
+        "ammo": 1,
+        "max_range": "16m",
+        "duration": "3.75s"
+      }
+    },
+    {
+      "name": "Thermal Bore",
+      "link": "https://www.thefinals.wiki/wiki/Thermal_Bore",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/dd/Thermal_Bore_Rank_1.png/100px-Thermal_Bore_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Scout",
+      "stats": {
+        "cooldown": "25s Reload - 2.6s",
+        "ammo": 2,
+        "damage": 25,
+        "environment_dmg": "Over 3000",
+        "damage_radius": "Inner - 2.5m Outer - 3m"
+      }
+    },
+    {
+      "name": "Thermal Vision",
+      "link": "https://www.thefinals.wiki/wiki/Thermal_Vision",
+      "image": "https://www.thefinals.wiki/w/images/thumb/1/11/Thermal_Vision_Maintenance.png/100px-Thermal_Vision_Maintenance.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "10s",
+        "ammo": 1,
+        "duration": "20s"
+      }
+    },
+    {
+      "name": "Tracking Dart",
+      "link": "https://www.thefinals.wiki/wiki/Tracking_Dart",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/c9/Tracking_Dart_Rank_1.png/100px-Tracking_Dart_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "12s Reload - 2.1s",
+        "ammo": 4,
+        "damage": 5,
+        "environment_dmg": 5,
+        "duration": "13s",
+        "rpm": 120
+      }
+    },
+    {
+      "name": "Vanishing Bomb",
+      "link": "https://www.thefinals.wiki/wiki/Vanishing_Bomb",
+      "image": "https://www.thefinals.wiki/w/images/thumb/5/54/Vanishing_Bomb_Rank_1.png/100px-Vanishing_Bomb_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Assassin",
+      "stats": {
+        "cooldown": "25s",
+        "ammo": 1,
+        "duration": "Self - 5s Teammates - 6.5s",
+        "radius": "4m"
+      }
+    },
+    {
+      "name": "Flashbang",
+      "link": "https://www.thefinals.wiki/wiki/Flashbang",
+      "image": "https://www.thefinals.wiki/w/images/thumb/6/6e/Flashbang_Rank_1.png/100px-Flashbang_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "18s",
+        "ammo": 2,
+        "duration": "4.5s"
+      }
+    },
+    {
+      "name": "Frag Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Frag_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/78/Frag_Grenade_Rank_1.png/100px-Frag_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 1,
+        "damage": 140,
+        "environment_dmg": 900,
+        "damage_radius": "Inner - 2.75m Outer - 5.5m"
+      }
+    },
+    {
+      "name": "Gas Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Gas_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a4/Gas_Grenade_Rank_1.png/100px-Gas_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "24s",
+        "ammo": 1,
+        "damage": "30/s→60/s(over 2s)",
+        "priming_time": "0.5s",
+        "duration": "12s",
+        "radius": "5m"
+      }
+    },
+    {
+      "name": "Goo Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Goo_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/93/Goo_Grenade_Rank_1.png/100px-Goo_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 2,
+        "health": "240 per Goo blob"
+      }
+    },
+    {
+      "name": "Pyro Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Pyro_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/dc/Pyro_Grenade_Rank_1.png/100px-Pyro_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "24s",
+        "ammo": 1,
+        "damage": "Flame - 20/s Burn - 15/s",
+        "duration": "12s"
+      }
+    },
+    {
+      "name": "Smoke Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Smoke_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/ee/Smoke_Grenade_Rank_1.png/100px-Smoke_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "50s",
+        "ammo": 2,
+        "duration": "9s"
+      }
+    }
+  ],
+  "specializations": [
+    {
+      "name": "Cloaking Device",
+      "link": "https://www.thefinals.wiki/wiki/Cloaking_Device",
+      "image": "https://www.thefinals.wiki/w/images/thumb/b/b0/Cloaking_Device_Rank_1.png/100px-Cloaking_Device_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Assassin",
+      "stats": {
+        "cooldown": "Energy-Based",
+        "duration": "Min - 11s Max - 29s",
+        "activation_costs": "33% of energy"
+      }
+    },
+    {
+      "name": "Evasive Dash",
+      "link": "https://www.thefinals.wiki/wiki/Evasive_Dash",
+      "image": "https://www.thefinals.wiki/w/images/thumb/4/42/Evasive_Dash_Rank_1.png/100px-Evasive_Dash_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Duelist",
+      "stats": {
+        "cooldown": "5s",
+        "ammo": 2
+      }
+    },
+    {
+      "name": "Grappling Hook",
+      "link": "https://www.thefinals.wiki/wiki/Grappling_Hook",
+      "image": "https://www.thefinals.wiki/w/images/thumb/b/b4/Grappling_Hook_Rank_1.png/100px-Grappling_Hook_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "6s",
+        "ammo": 1,
+        "max_range": "25m"
+      }
+    }
+  ]
+}

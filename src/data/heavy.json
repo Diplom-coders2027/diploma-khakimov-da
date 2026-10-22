@@ -1,0 +1,513 @@
+{
+  "class": "heavy",
+  "weapons": [
+    {
+      "name": ".50 Akimbo",
+      "link": "https://www.thefinals.wiki/wiki/.50_Akimbo",
+      "image": "https://www.thefinals.wiki/w/images/thumb/5/5a/.50_Akimbo_Rank_1.png/100px-.50_Akimbo_Rank_1.png.webp",
+      "description": "Dual, high-caliber handguns that deal high damage while sacrificing precision",
+      "type": "Handgun",
+      "unlock": "Free",
+      "stats": {
+        "body": 46,
+        "head": 92,
+        "environmental": 18,
+        "min_range": "32m",
+        "max_range": "39m",
+        "multiplier": 0.5,
+        "rpm": 230,
+        "magazine": 14,
+        "empty_reload": "3.00s",
+        "tactical_reload": "2.20s"
+      }
+    },
+    {
+      "name": "BFR Titan",
+      "link": "https://www.thefinals.wiki/wiki/BFR_Titan",
+      "image": "https://www.thefinals.wiki/w/images/thumb/1/1f/BFR_Titan_Rank_1.png/100px-BFR_Titan_Rank_1.png.webp",
+      "description": "An experimental hand cannon firing high-caliber bullets, able to deliver high impact even at longer ranges.",
+      "type": "Handgun",
+      "unlock": 500,
+      "stats": {
+        "body": 90,
+        "head": "135 (1.5×)",
+        "environmental": 95,
+        "min_range": "25m",
+        "max_range": "40m",
+        "multiplier": 0.7,
+        "rpm": 71,
+        "magazine": 5,
+        "empty_reload": 4.75,
+        "tactical_reload": "Segmented"
+      }
+    },
+    {
+      "name": "Flamethrower",
+      "link": "https://www.thefinals.wiki/wiki/Flamethrower",
+      "image": "https://www.thefinals.wiki/w/images/thumb/5/50/Flamethrower_Rank_1.png/100px-Flamethrower_Rank_1.png.webp",
+      "description": "Emits a stream of burning fuel that burns and damages contestants",
+      "type": "Miscellaneous",
+      "unlock": 500,
+      "stats": {
+        "body": "Hit - 30 Burn - 15/s",
+        "environmental": 2,
+        "min_range": "7.4m",
+        "max_range": "7.4m",
+        "multiplier": 0,
+        "rpm": 170,
+        "magazine": 30,
+        "empty_reload": "3.55s",
+        "tactical_reload": "3.55s"
+      }
+    },
+    {
+      "name": "KS-23",
+      "link": "https://www.thefinals.wiki/wiki/KS-23",
+      "image": "https://www.thefinals.wiki/w/images/thumb/f/f4/KS-23_Rank_1.png/100px-KS-23_Rank_1.png.webp",
+      "description": "Pump-action shotgun that fires slugs that deal high arena damage",
+      "type": "Shotgun",
+      "unlock": "Strategist",
+      "stats": {
+        "body": 104,
+        "environmental": 1000,
+        "min_range": "12m",
+        "max_range": "22m",
+        "multiplier": 0.58,
+        "rpm": 78,
+        "magazine": 6,
+        "empty_reload": "4.36s",
+        "tactical_reload": "Segmented"
+      }
+    },
+    {
+      "name": "Lewis Gun",
+      "link": "https://www.thefinals.wiki/wiki/Lewis_Gun",
+      "image": "https://www.thefinals.wiki/w/images/thumb/1/14/Lewis_Gun_Rank_1.png/100px-Lewis_Gun_Rank_1.png.webp",
+      "description": "Pan magazine-fed light machine gun.",
+      "type": "LMG",
+      "unlock": 500,
+      "stats": {
+        "body": 23,
+        "head": 34.5,
+        "environmental": 12,
+        "min_range": "35m",
+        "max_range": "40m",
+        "multiplier": 0.67,
+        "rpm": 500,
+        "magazine": 47,
+        "empty_reload": "3.55s",
+        "tactical_reload": "3.25s"
+      }
+    },
+    {
+      "name": "M134 Minigun",
+      "link": "https://www.thefinals.wiki/wiki/M134_Minigun",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/96/M134_Minigun_Rank_1.png/100px-M134_Minigun_Rank_1.png.webp",
+      "description": "A heavily modified minigun with relentless firepower, perfect for sustained suppression.",
+      "type": "HMG",
+      "unlock": "Demolisher",
+      "stats": {
+        "body": 11,
+        "head": "14.63 (1.33×)",
+        "environmental": 35,
+        "min_range": "30m",
+        "max_range": "50m",
+        "multiplier": 0.4,
+        "rpm": 1500,
+        "magazine": 300,
+        "empty_reload": "5.25s",
+        "tactical_reload": "5.00s"
+      }
+    },
+    {
+      "name": "M60",
+      "link": "https://www.thefinals.wiki/wiki/M60",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a6/M60_Rank_1.png/100px-M60_Rank_1.png.webp",
+      "description": "Fully automatic light machine gun",
+      "type": "LMG",
+      "unlock": "Free",
+      "stats": {
+        "body": 20,
+        "head": 30,
+        "environmental": 9,
+        "min_range": "25m",
+        "max_range": "35m",
+        "multiplier": 0.5,
+        "rpm": 580,
+        "magazine": 70,
+        "empty_reload": "3.55s",
+        "tactical_reload": "3.55s"
+      }
+    },
+    {
+      "name": "MGL32",
+      "link": "https://www.thefinals.wiki/wiki/MGL32",
+      "image": "https://www.thefinals.wiki/w/images/thumb/b/b1/MGL32_Rank_1.png/100px-MGL32_Rank_1.png.webp",
+      "description": "Revolving-action grenade launcher",
+      "type": "Grenade Launcher",
+      "unlock": 500,
+      "stats": {
+        "body": "Direct - 83 Splash From (Inner) - 75 (90%) To (Outer) - 10 (12%)",
+        "environmental": 300,
+        "rpm": 90,
+        "magazine": 6,
+        "empty_reload": "3.10s",
+        "tactical_reload": "2.85s",
+        "radius": "Inner - 2m Outer - 4m"
+      }
+    },
+    {
+      "name": "SA1216",
+      "link": "https://www.thefinals.wiki/wiki/SA1216",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/cb/SA1216_Rank_1.png/100px-SA1216_Rank_1.png.webp",
+      "description": "Rapid-fire, semi-automatic shotgun with a quad-tube magazine",
+      "type": "Shotgun",
+      "unlock": "Free",
+      "stats": {
+        "body": "6×12",
+        "environmental": "1×12",
+        "min_range": "12.5m",
+        "max_range": "20m",
+        "multiplier": 0.62,
+        "rpm": 190,
+        "magazine": "4×4",
+        "empty_reload": "3.25s",
+        "tactical_reload": "2.35s"
+      }
+    },
+    {
+      "name": "ShAK-50",
+      "link": "https://www.thefinals.wiki/wiki/ShAK-50",
+      "image": "https://www.thefinals.wiki/w/images/thumb/f/fb/ShAK-50_Rank_1.png/100px-ShAK-50_Rank_1.png.webp",
+      "description": "A high-caliber automatic rifle that fires multiple bullets per round.",
+      "type": "Assault Rifle",
+      "unlock": "Enforcer",
+      "stats": {
+        "body": "15×2",
+        "head": "22.5×2",
+        "environmental": "7×2",
+        "min_range": "15m",
+        "max_range": "25m",
+        "multiplier": 0.65,
+        "rpm": 420,
+        "magazine": 20,
+        "empty_reload": "3.20s",
+        "tactical_reload": "2.40s"
+      }
+    },
+    {
+      "name": "Sledgehammer",
+      "link": "https://www.thefinals.wiki/wiki/Sledgehammer",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/cb/Sledgehammer_Rank_1.png/100px-Sledgehammer_Rank_1.png.webp",
+      "description": "Powerful melee weapon built for destruction. Can perform wide sweeping attacks and a concentrated overhead attack.",
+      "type": "Melee",
+      "unlock": "Free",
+      "stats": {
+        "environmental": 685,
+        "primary_attack": "Precise - 120 Glancing blow - 90",
+        "alt_attack": "Precise - 200 Glancing blow - 150",
+        "lunge_distance": "5m",
+        "precision_zone": "10°",
+        "environmental_alt_fire": "Over 2000"
+      }
+    },
+    {
+      "name": "Spear",
+      "link": "https://www.thefinals.wiki/wiki/Spear",
+      "image": "https://www.thefinals.wiki/w/images/thumb/3/37/Spear_Rank_1.png/100px-Spear_Rank_1.png.webp",
+      "description": "Long-reach melee weapon built for stabbing attacks. Spin to perform a sweeping strike that covers a wider arc, dealing increased damage with each spin.",
+      "type": "Melee",
+      "unlock": 500,
+      "stats": {
+        "environmental": "?",
+        "primary_attack": "Precise - 82 Glancing blow - 57",
+        "alt_attack": "75 → 125 → 150",
+        "lunge_distance": "6.5m",
+        "precision_zone": "8°",
+        "environmental_alt_fire": "?"
+      }
+    }
+  ],
+  "gadgets": [
+    {
+      "name": "Anti-Gravity Cube",
+      "link": "https://www.thefinals.wiki/wiki/Anti-Gravity_Cube",
+      "image": "https://www.thefinals.wiki/w/images/thumb/4/42/Anti-Gravity_Cube_Rank_1.png/100px-Anti-Gravity_Cube_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "28s",
+        "ammo": 1,
+        "health": 150,
+        "duration": "20s",
+        "radius": "High - 7m Wide - 4m"
+      }
+    },
+    {
+      "name": "Barricade",
+      "link": "https://www.thefinals.wiki/wiki/Barricade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/b/be/Barricade_Rank_1.png/100px-Barricade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Strategist",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 2,
+        "max_deployed": 4,
+        "health": "800 per panel (environmental)"
+      }
+    },
+    {
+      "name": "C4",
+      "link": "https://www.thefinals.wiki/wiki/C4",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a3/C4_Rank_1.png/100px-C4_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Strategist",
+      "stats": {
+        "cooldown": "45s",
+        "ammo": 1,
+        "damage": 155,
+        "environment_dmg": "Over 2000",
+        "damage_radius": "Inner - 1.6m Outer - 6.5m",
+        "priming_time": "1.9s",
+        "max_deployed": 2,
+        "health": 25
+      }
+    },
+    {
+      "name": "Dome Shield",
+      "link": "https://www.thefinals.wiki/wiki/Dome_Shield",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/cd/Dome_Shield_Rank_1.png/100px-Dome_Shield_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Guardian",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 1,
+        "health": "Shield - 250 Projectile - ?",
+        "duration": "5.5s",
+        "radius": "4m"
+      }
+    },
+    {
+      "name": "Healing Emitter",
+      "link": "https://www.thefinals.wiki/wiki/Healing_Emitter",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/9b/Healing_Emitter_Rank_1.png/100px-Healing_Emitter_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Guardian",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 1,
+        "health": 200,
+        "healing": "10/s → 20/s (over 2s)",
+        "radius": "4m"
+      }
+    },
+    {
+      "name": "Lockbolt",
+      "link": "https://www.thefinals.wiki/wiki/Lockbolt",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/d3/Lockbolt_Rank_1.png/100px-Lockbolt_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Enforcer",
+      "stats": {
+        "cooldown": "30s Reload - 2.3s",
+        "ammo": 1,
+        "damage": 5,
+        "health": "Anchor - 200",
+        "max_range": "6m",
+        "duration": "7s"
+      }
+    },
+    {
+      "name": "Pyro Mine",
+      "link": "https://www.thefinals.wiki/wiki/Pyro_Mine",
+      "image": "https://www.thefinals.wiki/w/images/thumb/2/23/Pyro_Mine_Rank_1.png/100px-Pyro_Mine_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": 500,
+      "stats": {
+        "cooldown": "27s",
+        "ammo": 2,
+        "damage": "Explosion - 55 Flame - 20/s Burn - 15/s",
+        "environment_dmg": 500,
+        "priming_time": "1.6s",
+        "max_deployed": 2,
+        "health": 25,
+        "duration": "10s"
+      }
+    },
+    {
+      "name": "RPG-7",
+      "link": "https://www.thefinals.wiki/wiki/RPG-7",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/7a/RPG-7_Rank_1.png/100px-RPG-7_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Demolisher",
+      "stats": {
+        "cooldown": "45s Reload - 2.15s",
+        "ammo": 1,
+        "damage": 110,
+        "environment_dmg": "Over 2000",
+        "damage_radius": "Inner - 1.5m Outer - 5.5m"
+      }
+    },
+    {
+      "name": "Flashbang",
+      "link": "https://www.thefinals.wiki/wiki/Flashbang",
+      "image": "https://www.thefinals.wiki/w/images/thumb/6/6e/Flashbang_Rank_1.png/100px-Flashbang_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "18s",
+        "ammo": 2,
+        "duration": "4.5s"
+      }
+    },
+    {
+      "name": "Frag Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Frag_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/78/Frag_Grenade_Rank_1.png/100px-Frag_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 1,
+        "damage": 140,
+        "environment_dmg": 900,
+        "damage_radius": "Inner - 2.75m Outer - 5.5m"
+      }
+    },
+    {
+      "name": "Gas Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Gas_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a4/Gas_Grenade_Rank_1.png/100px-Gas_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "24s",
+        "ammo": 1,
+        "damage": "30/s→60/s(over 2s)",
+        "priming_time": "0.5s",
+        "duration": "12s",
+        "radius": "5m"
+      }
+    },
+    {
+      "name": "Goo Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Goo_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/93/Goo_Grenade_Rank_1.png/100px-Goo_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 2,
+        "health": "240 per Goo blob"
+      }
+    },
+    {
+      "name": "Pyro Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Pyro_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/dc/Pyro_Grenade_Rank_1.png/100px-Pyro_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "24s",
+        "ammo": 1,
+        "damage": "Flame - 20/s Burn - 15/s",
+        "duration": "12s"
+      }
+    },
+    {
+      "name": "Smoke Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Smoke_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/ee/Smoke_Grenade_Rank_1.png/100px-Smoke_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "50s",
+        "ammo": 2,
+        "duration": "9s"
+      }
+    },
+    {
+      "name": "Proximity Sensor",
+      "link": "https://www.thefinals.wiki/wiki/Proximity_Sensor",
+      "image": "https://www.thefinals.wiki/w/images/thumb/c/c9/Proximity_Sensor_Rank_1.png/100px-Proximity_Sensor_Rank_1.png.webp",
+      "type": "Utility",
+      "unlock": "Enforcer",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 2,
+        "max_deployed": 2,
+        "health": 25,
+        "radius": "11m"
+      }
+    },
+    {
+      "name": "Explosive Mine",
+      "link": "https://www.thefinals.wiki/wiki/Explosive_Mine",
+      "image": "https://www.thefinals.wiki/w/images/thumb/2/24/Explosive_Mine_Rank_1.png/100px-Explosive_Mine_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Demolisher",
+      "stats": {
+        "cooldown": "15s",
+        "ammo": 1,
+        "damage": 120,
+        "environment_dmg": 1025,
+        "damage_radius": "4.25m",
+        "priming_time": "1.6s",
+        "max_deployed": 2,
+        "health": 25
+      }
+    }
+  ],
+  "specializations": [
+    {
+      "name": "Charge 'N' Slam",
+      "link": "https://www.thefinals.wiki/wiki/Charge_%27N%27_Slam",
+      "image": "https://www.thefinals.wiki/w/images/thumb/4/45/Charge_N_Slam_Rank_1.png/100px-Charge_N_Slam_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Demolisher",
+      "stats": {
+        "cooldown": "12s",
+        "duration": "3s",
+        "damage": "100 Initial 40 Subsequent 50-200 Ground Slam",
+        "damage_radius": "4m (Ground Slam)"
+      }
+    },
+    {
+      "name": "Goo Gun",
+      "link": "https://www.thefinals.wiki/wiki/Goo_Gun",
+      "image": "https://www.thefinals.wiki/w/images/thumb/2/2d/Goo_Gun_Card.png/100px-Goo_Gun_Card.png.webp",
+      "type": "Specialization",
+      "unlock": "Strategist",
+      "stats": {
+        "cooldown": "Reload - 2.4s",
+        "ammo": 20,
+        "health": "240 per Goo Blob",
+        "rpm": 230
+      }
+    },
+    {
+      "name": "Mesh Shield",
+      "link": "https://www.thefinals.wiki/wiki/Mesh_Shield",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/e9/Mesh_Shield_Rank_1.png/100px-Mesh_Shield_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "Energy-Based Not destroyed - 5s → 10 energy per second Destroyed - 15s → Restored to 300 energy",
+        "activation_costs": "225 energy when shield lowered",
+        "health": "850 energy"
+      }
+    },
+    {
+      "name": "Winch Claw",
+      "link": "https://www.thefinals.wiki/wiki/Winch_Claw",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/e0/Winch_Claw_Rank_1.png/100px-Winch_Claw_Rank_1.png.webp",
+      "type": "Specialization",
+      "unlock": "Enforcer",
+      "stats": {
+        "cooldown": "Miss - 10s Low-value Target - 14s High-value Target - 18s",
+        "duration": "Stun: 3m or less - 0.1s Max range - 0.5s",
+        "max_range": "12m",
+        "damage": 5
+      }
+    }
+  ]
+}
