@@ -1,0 +1,170 @@
+:root {
+  --header-pad-y: 12px;
+  --header-pad-x: 32px;
+  --nav-gap: 24px;
+  --nav-font: 22px;
+  --logo-h: 22px;
+  --img-h: 60px;
+  --grid-width: 140px;
+}
+
+body {
+  margin: 0;
+  background-color: #d21f3c;
+  font-weight: bold;
+  font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--nav-gap);
+  /* на очень широких экранах контент ограничивается ~1400px по центру */
+  padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
+  background: black;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.logo-link {
+  display: flex;               /* убирает лишний отступ под картинкой */
+}
+
+.logo {
+  height: var(--logo-h);
+  width: auto;
+  display: block;
+}
+
+nav a,
+.dropdown_toggle {
+  text-decoration: none;
+  color: white;
+  font-family: inherit;
+  font-style: italic;
+  font-weight: bold;
+  font-size: var(--nav-font);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+ 
+.dropdown_toggle {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+nav a:hover,
+.dropdown_toggle:hover {
+  color: #d21f3c;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px + var(--header-pad-y));
+  left: 0;                     /* margin-left у кнопки больше нет */
+  min-width: 180px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  font-size: var(--nav-font);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #d21f3c;
+}
+
+.light_weapons a{
+  display: block;
+}
+
+.light_weapons img{
+  border-radius: 5px;
+  height: var(--img-h);
+  display: block; 
+}
+
+
+.light_weapons li{
+  border-radius: 8px;
+  overflow: hidden;
+  background: #cfd8dc;
+}
+
+.light_weapons{
+  display: grid;
+  grid-template-columns: repeat(3, var(--grid-width));
+  gap: 5px;
+  list-style: none;   /* убрать маркеры списка */
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  transition: transform 0.5 ease-out;
+}
+
+
+.light_label{
+  text-align: center;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+/* ===== Большие мониторы (от 1920px) ===== */
+@media (min-width: 1920px) {
+  :root {
+    --nav-font: 22px;
+    --logo-h: 24px;
+    --nav-gap: 28px;
+    --img-h: 63px;
+  }
+}
+
+/* ===== Ноутбуки (до 1200px) ===== */
+@media (max-width: 1200px) {
+  :root {
+    --header-pad-x: 24px;
+    --nav-gap: 20px;
+    --img-h: 57px;
+  }
+}
+
+/* ===== Планшеты (до 992px) ===== */
+@media (max-width: 992px) {
+  :root {
+    --header-pad-y: 14px;
+    --header-pad-x: 20px;
+    --nav-gap: 16px;
+    --nav-font: 18px;
+    --logo-h: 20px;
+    --img-h: 53px;
+  }
+}
