@@ -5,6 +5,7 @@
   --nav-font: 22px;
   --logo-h: 22px;
   --img-h: 60px;
+  --grid-width: 140px;
 }
 
 body {
@@ -102,14 +103,39 @@ nav a:hover,
   color: #d21f3c;
 }
 
+.light_weapons a{
+  display: block;
+}
+
 .light_weapons img{
   border-radius: 5px;
   height: var(--img-h);
+  display: block; 
+}
+
+
+.light_weapons li{
+  border-radius: 8px;
+  overflow: hidden;
+  background: #cfd8dc;
+}
+
+.light_weapons{
+  display: grid;
+  grid-template-columns: repeat(3, var(--grid-width));
+  gap: 5px;
+  list-style: none;   /* убрать маркеры списка */
+  margin: 0;
+  padding: 0;
+  justify-content: center;
   transition: transform 0.5 ease-out;
 }
 
-.light_weapons img:hover{
-  transform: scale(1.1);
+
+.light_label{
+  text-align: center;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 /* ===== Большие мониторы (от 1920px) ===== */
@@ -118,6 +144,7 @@ nav a:hover,
     --nav-font: 22px;
     --logo-h: 24px;
     --nav-gap: 28px;
+    --img-h: 63px;
   }
 }
 
@@ -126,6 +153,7 @@ nav a:hover,
   :root {
     --header-pad-x: 24px;
     --nav-gap: 20px;
+    --img-h: 57px;
   }
 }
 
@@ -137,5 +165,6 @@ nav a:hover,
     --nav-gap: 16px;
     --nav-font: 18px;
     --logo-h: 20px;
+    --img-h: 53px;
   }
 }
