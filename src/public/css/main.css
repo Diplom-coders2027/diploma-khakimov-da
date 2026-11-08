@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  background-color: #d21f3c;
+  background-color: #6F4F9E;
   font-weight: bold;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
 }
@@ -25,8 +25,8 @@ header {
   gap: var(--nav-gap);
   /* на очень широких экранах контент ограничивается ~1400px по центру */
   padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
-  background: black;
-  color: #fff;
+  background: #0A0714;
+  color: #FFF4DC;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
@@ -63,7 +63,7 @@ nav a,
 
 nav a:hover,
 .dropdown_toggle:hover {
-  color: #d21f3c;
+  color: #6F4F9E;
 }
 
 .dropdown {
@@ -103,42 +103,57 @@ nav a:hover,
   color: #d21f3c;
 }
 
-.light_weapons a{
-  display: block;
+.class_weapons {
+  display: grid;
+  grid-template-columns: repeat(3, var(--grid-width));
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  transition: transform 0.5s ease-out;   
+  margin-bottom: 40px;
 }
 
-.light_weapons img{
-  border-radius: 5px;
-  height: var(--img-h);
-  display: block; 
-}
-
-
-.light_weapons li{
+.class_weapons li {
   border-radius: 8px;
   overflow: hidden;
   background: #cfd8dc;
 }
 
-.light_weapons{
-  display: grid;
-  grid-template-columns: repeat(3, var(--grid-width));
-  gap: 5px;
-  list-style: none;   /* убрать маркеры списка */
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  transition: transform 0.5 ease-out;
+.class_weapons a {
+  display: flex;           
+  align-items: center;     
+  gap: 12px;                
+  text-decoration: none;
+  color: inherit;
 }
 
+.class_weapons img {
+  border-radius: 5px;
+  height: var(--img-h);
+  width: var(--img-h);       
+  object-fit: cover;
+  flex-shrink: 0;           
+}
 
-.light_label{
+.weapon_name {
+  flex: 1;                 
+  text-align: center;      
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  padding: 0 8px;         
+  overflow-wrap: anywhere;
+}
+
+.class_label {
   text-align: center;
   font-style: italic;
   text-transform: uppercase;
 }
 
-/* ===== Большие мониторы (от 1920px) ===== */
+
 @media (min-width: 1920px) {
   :root {
     --nav-font: 22px;
@@ -148,7 +163,7 @@ nav a:hover,
   }
 }
 
-/* ===== Ноутбуки (до 1200px) ===== */
+
 @media (max-width: 1200px) {
   :root {
     --header-pad-x: 24px;
@@ -157,7 +172,7 @@ nav a:hover,
   }
 }
 
-/* ===== Планшеты (до 992px) ===== */
+
 @media (max-width: 992px) {
   :root {
     --header-pad-y: 14px;

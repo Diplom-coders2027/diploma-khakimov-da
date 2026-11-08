@@ -13,16 +13,40 @@
 <body>
     <%- include('blocks/header') -%>
 
-    <h2 class="light_label"><%= light.class %></h2>
-    <ul class = "light_weapons">
+    <h2 class="class_label"><%= light.class %></h2>
+    <ul class="class_weapons">
         <% light.weapons.forEach(w => { %>
-            <li>
+            <li class="weapon">
                 <a href="/weapons/<%= w.name %>">
                     <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>
         <% }) %>
     </ul>
-    </div>
+
+    <h2 class="class_label"><%= heavy.class %></h2>
+    <ul class="class_weapons">
+        <% heavy.weapons.forEach(w => { %>
+            <li class="weapon">
+                <a href="/weapons/<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <span class="weapon_name"><%= w.name %></span>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+
+    <h2 class="class_label"><%= medium.class %></h2>
+    <ul class="class_weapons">
+        <% medium.weapons.forEach(w => { %>
+            <li class="weapon">
+                <a href="/weapons/<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <span class="weapon_name"><%= w.name %></span>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
