@@ -1,19 +1,41 @@
 :root {
-  --header-pad-y: 12px;
-  --header-pad-x: 32px;
+  --header-pad-y: 15px;
+  --header-pad-x: 45px;
   --nav-gap: 24px;
-  --nav-font: 22px;
-  --logo-h: 22px;
-  --img-h: 60px;
-  --grid-width: 140px;
+  --nav-font: 35px;
+  --logo-h: 30px;
+  --img-h: 120px;
+  --grid-width: 230px;
+  --weapon-name-size:25px;
 }
 
 body {
   margin: 0;
-  background-color: #6F4F9E;
+  background-color: #F0D9B0;
+  color: #222;
   font-weight: bold;
+  min-height: 300px;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
 }
+
+/* footer {
+  background-color: #18181b;
+  font-size: 15px;
+  position: sticky;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Domine";
+  align-items: center;
+  color: white;
+  nav-down: 0;
+  padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p{
+  min-width: 50px;
+} */
 
 header {
   position: sticky;
@@ -23,10 +45,9 @@ header {
   justify-content: flex-start;
   align-items: center;
   gap: var(--nav-gap);
-  /* на очень широких экранах контент ограничивается ~1400px по центру */
   padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
-  background: #0A0714;
-  color: #FFF4DC;
+  background: #526447;
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
@@ -63,7 +84,7 @@ nav a,
 
 nav a:hover,
 .dropdown_toggle:hover {
-  color: #6F4F9E;
+  color: #F0D9B0;
 }
 
 .dropdown {
@@ -75,7 +96,7 @@ nav a:hover,
   position: absolute;
   top: calc(100% + 12px + var(--header-pad-y));
   left: 0;                     /* margin-left у кнопки больше нет */
-  min-width: 180px;
+  min-width: 250px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -100,25 +121,28 @@ nav a:hover,
 }
 
 .dropdown-menu a:hover {
-  color: #d21f3c;
+  color: #F0D9B0;
 }
 
 .class_weapons {
   display: grid;
   grid-template-columns: repeat(3, var(--grid-width));
-  gap: 5px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
   justify-content: center;
   transition: transform 0.5s ease-out;   
   margin-bottom: 40px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
 }
+
 
 .class_weapons li {
   border-radius: 8px;
   overflow: hidden;
-  background: #cfd8dc;
+  background: #E2C593;
 }
 
 .class_weapons a {
@@ -140,7 +164,7 @@ nav a:hover,
 .weapon_name {
   flex: 1;                 
   text-align: center;      
-  font-size: 16px;
+  font-size: var(--weapon-name-size);
   font-weight: 600;
   color: #222;
   padding: 0 8px;         
@@ -148,13 +172,14 @@ nav a:hover,
 }
 
 .class_label {
+  font-size: 50px;
   text-align: center;
   font-style: italic;
   text-transform: uppercase;
 }
 
 
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
   :root {
     --nav-font: 22px;
     --logo-h: 24px;
@@ -163,8 +188,15 @@ nav a:hover,
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1600px){
+  :root{
 
-@media (max-width: 1200px) {
+  }
+
+} */
+
+
+/* @media (max-width: 1200px) {
   :root {
     --header-pad-x: 24px;
     --nav-gap: 20px;
@@ -182,4 +214,4 @@ nav a:hover,
     --logo-h: 20px;
     --img-h: 53px;
   }
-}
+} */

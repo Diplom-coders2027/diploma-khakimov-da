@@ -282,7 +282,7 @@
       "stats": {
         "cooldown": "30s",
         "ammo": 1,
-        "health": "Shield - 250 Projectile - ?",
+        "health": "Shield - 400hp Shield Decay - 66hp/s Projectile - ?hp",
         "duration": "5.5s",
         "radius": "4m"
       }
@@ -297,7 +297,7 @@
         "cooldown": "30s",
         "ammo": 1,
         "health": 200,
-        "healing": "10/s → 20/s (over 2s)",
+        "healing": "10/s → 15/s (over 2s)",
         "radius": "4m"
       }
     },
@@ -325,7 +325,7 @@
       "stats": {
         "cooldown": "27s",
         "ammo": 2,
-        "damage": "Explosion - 55 Flame - 20/s Burn - 15/s",
+        "damage": "Explosion - 45 Flame - 20/s Burn - 15.75/s",
         "environment_dmg": 500,
         "priming_time": "1.6s",
         "max_deployed": 2,
@@ -345,84 +345,6 @@
         "damage": 110,
         "environment_dmg": "Over 2000",
         "damage_radius": "Inner - 1.5m Outer - 5.5m"
-      }
-    },
-    {
-      "name": "Flashbang",
-      "link": "https://www.thefinals.wiki/wiki/Flashbang",
-      "image": "https://www.thefinals.wiki/w/images/thumb/6/6e/Flashbang_Rank_1.png/100px-Flashbang_Rank_1.png.webp",
-      "type": "Offensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "18s",
-        "ammo": 2,
-        "duration": "4.5s"
-      }
-    },
-    {
-      "name": "Frag Grenade",
-      "link": "https://www.thefinals.wiki/wiki/Frag_Grenade",
-      "image": "https://www.thefinals.wiki/w/images/thumb/7/78/Frag_Grenade_Rank_1.png/100px-Frag_Grenade_Rank_1.png.webp",
-      "type": "Offensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "20s",
-        "ammo": 1,
-        "damage": 140,
-        "environment_dmg": 900,
-        "damage_radius": "Inner - 2.75m Outer - 5.5m"
-      }
-    },
-    {
-      "name": "Gas Grenade",
-      "link": "https://www.thefinals.wiki/wiki/Gas_Grenade",
-      "image": "https://www.thefinals.wiki/w/images/thumb/a/a4/Gas_Grenade_Rank_1.png/100px-Gas_Grenade_Rank_1.png.webp",
-      "type": "Offensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "24s",
-        "ammo": 1,
-        "damage": "30/s→60/s(over 2s)",
-        "priming_time": "0.5s",
-        "duration": "12s",
-        "radius": "5m"
-      }
-    },
-    {
-      "name": "Goo Grenade",
-      "link": "https://www.thefinals.wiki/wiki/Goo_Grenade",
-      "image": "https://www.thefinals.wiki/w/images/thumb/9/93/Goo_Grenade_Rank_1.png/100px-Goo_Grenade_Rank_1.png.webp",
-      "type": "Defensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "30s",
-        "ammo": 2,
-        "health": "240 per Goo blob"
-      }
-    },
-    {
-      "name": "Pyro Grenade",
-      "link": "https://www.thefinals.wiki/wiki/Pyro_Grenade",
-      "image": "https://www.thefinals.wiki/w/images/thumb/d/dc/Pyro_Grenade_Rank_1.png/100px-Pyro_Grenade_Rank_1.png.webp",
-      "type": "Offensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "24s",
-        "ammo": 1,
-        "damage": "Flame - 20/s Burn - 15/s",
-        "duration": "12s"
-      }
-    },
-    {
-      "name": "Smoke Grenade",
-      "link": "https://www.thefinals.wiki/wiki/Smoke_Grenade",
-      "image": "https://www.thefinals.wiki/w/images/thumb/e/ee/Smoke_Grenade_Rank_1.png/100px-Smoke_Grenade_Rank_1.png.webp",
-      "type": "Defensive",
-      "unlock": "Free",
-      "stats": {
-        "cooldown": "50s",
-        "ammo": 2,
-        "duration": "9s"
       }
     },
     {
@@ -448,12 +370,91 @@
       "stats": {
         "cooldown": "15s",
         "ammo": 1,
-        "damage": 120,
+        "damage": 145,
         "environment_dmg": 1025,
         "damage_radius": "4.25m",
         "priming_time": "1.6s",
         "max_deployed": 2,
         "health": 25
+      }
+    },
+    {
+      "name": "Flashbang",
+      "link": "https://www.thefinals.wiki/wiki/Flashbang",
+      "image": "https://www.thefinals.wiki/w/images/thumb/6/6e/Flashbang_Rank_1.png/100px-Flashbang_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "18s",
+        "ammo": 2,
+        "duration": "Minimum 2s Maximum 5s"
+      }
+    },
+    {
+      "name": "Frag Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Frag_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/7/78/Frag_Grenade_Rank_1.png/100px-Frag_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 1,
+        "damage": 165,
+        "environment_dmg": 900,
+        "damage_radius": "Inner - 2.75m Outer - 5.5m"
+      }
+    },
+    {
+      "name": "Gas Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Gas_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/a/a4/Gas_Grenade_Rank_1.png/100px-Gas_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "20s",
+        "ammo": 2,
+        "damage": "30/s→60/s(over 2s)",
+        "priming_time": "0.5s",
+        "duration": "8s",
+        "radius": "4.5m"
+      }
+    },
+    {
+      "name": "Goo Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Goo_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/9/93/Goo_Grenade_Rank_1.png/100px-Goo_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "30s",
+        "ammo": 2,
+        "health": "240 per Goo blob"
+      }
+    },
+    {
+      "name": "Pyro Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Pyro_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/d/dc/Pyro_Grenade_Rank_1.png/100px-Pyro_Grenade_Rank_1.png.webp",
+      "type": "Offensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "24s",
+        "ammo": 1,
+        "damage": "Explosion - 40 Flame - 20/s Burn - 15.75/s",
+        "duration": "12s"
+      }
+    },
+    {
+      "name": "Smoke Grenade",
+      "link": "https://www.thefinals.wiki/wiki/Smoke_Grenade",
+      "image": "https://www.thefinals.wiki/w/images/thumb/e/ee/Smoke_Grenade_Rank_1.png/100px-Smoke_Grenade_Rank_1.png.webp",
+      "type": "Defensive",
+      "unlock": "Free",
+      "stats": {
+        "cooldown": "50s",
+        "ammo": 2,
+        "duration": "13s",
+        "radius": "4.5m"
       }
     }
   ],
@@ -466,9 +467,9 @@
       "unlock": "Demolisher",
       "stats": {
         "cooldown": "12s",
-        "duration": "3s",
         "damage": "100 Initial 40 Subsequent 50-200 Ground Slam",
-        "damage_radius": "4m (Ground Slam)"
+        "damage_radius": "4m (Ground Slam)",
+        "duration": "3s"
       }
     },
     {
@@ -492,8 +493,8 @@
       "unlock": "Free",
       "stats": {
         "cooldown": "Energy-Based Not destroyed - 5s → 10 energy per second Destroyed - 15s → Restored to 300 energy",
-        "activation_costs": "225 energy when shield lowered",
-        "health": "850 energy"
+        "health": "850 energy",
+        "activation_costs": "225 energy when shield lowered"
       }
     },
     {
@@ -504,9 +505,9 @@
       "unlock": "Enforcer",
       "stats": {
         "cooldown": "Miss - 10s Low-value Target - 14s High-value Target - 18s",
-        "duration": "Stun: 3m or less - 0.1s Max range - 0.5s",
+        "damage": 5,
         "max_range": "12m",
-        "damage": 5
+        "duration": "Stun: 3m or less - 0.1s Max range - 0.5s"
       }
     }
   ]
