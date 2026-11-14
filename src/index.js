@@ -12,26 +12,36 @@ app.get('/', (req,res) => {
     res.render('index')
 })
 
-const DATA_DIR = path.join(__dirname, 'data');
 
-async function loadJson(fileName) {
-  const raw = await fs.readFile(path.join(DATA_DIR, fileName), 'utf-8');
-  return JSON.parse(raw);
+const cache = new Map();
+async function loadJson(name) {
+  if (!cache.has(name)) {
+    const raw = await fs.readFile(path.join(__dirname, 'data', `${name}.json`), 'utf8');
+    cache.set(name, JSON.parse(raw));
+  }
+  return cache.get(name);
 }
 
-app.get('/weapons', async (req, res, next) => {
-  try {
-    const [heavy, light, medium] = await Promise.all([
-      loadJson('heavy.json'),
-      loadJson('light.json'),
-      loadJson('medium.json'),
-    ]);
 
-    res.render('weapons', {heavy, light, medium});
+async function loadMany(names) {
+  const values = await Promise.all(names.map(loadJson));
+  return Object.fromEntries(names.map((n, i) => [n, values[i]]));
+}
+
+
+const page = (view, files) => async (req, res, next) => {
+  try {
+    res.render(view, await loadMany(files));
   } catch (err) {
     next(err);
   }
-});
+};
+
+
+app.get('/weapons', page('weapons', ['heavy', 'light', 'medium']));
+app.get('/specializations',   page('specializations',   ['heavy', 'light', 'medium']));
+
+
 
 app.get('/about', (req,res) => {
     res.render('about-us')
