@@ -40,6 +40,7 @@ const page = (view, files) => async (req, res, next) => {
 
 app.get('/weapons', page('weapons', ['heavy', 'light', 'medium']));
 app.get('/specializations',   page('specializations',   ['heavy', 'light', 'medium']));
+app.get('/gadgets', page('gadgets', ['heavy', 'light', 'medium']));
 
 
 

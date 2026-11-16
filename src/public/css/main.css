@@ -11,8 +11,8 @@
 
 body {
   margin: 0;
-  background-color: #F0D9B0;
-  color: #222;
+  background-color: #2A2F45;
+  color: white;
   font-weight: bold;
   min-height: 300px;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
@@ -46,7 +46,7 @@ header {
   align-items: center;
   gap: var(--nav-gap);
   padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
-  background: #526447;
+  background: #0B0D14;
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
@@ -84,7 +84,7 @@ nav a,
 
 nav a:hover,
 .dropdown_toggle:hover {
-  color: #F0D9B0;
+  color: #2A2F45;
 }
 
 .dropdown {
@@ -121,7 +121,7 @@ nav a:hover,
 }
 
 .dropdown-menu a:hover {
-  color: #F0D9B0;
+  color: #2A2F45;
 }
 
 .class_weapons {
@@ -142,7 +142,7 @@ nav a:hover,
 .class_weapons li {
   border-radius: 8px;
   overflow: hidden;
-  background: #E2C593;
+  background: #171A28;
 }
 
 .class_weapons a {
@@ -166,7 +166,7 @@ nav a:hover,
   text-align: center;      
   font-size: var(--weapon-name-size);
   font-weight: 600;
-  color: #222;
+  color: white;
   padding: 0 8px;         
   overflow-wrap: anywhere;
 }

@@ -18,7 +18,7 @@
         <% light.weapons.forEach(w => { %>
             <li class="weapon">
                 <a href="/weapons/<%= w.name %>">
-                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= encodeURIComponent(w.name) %>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>
@@ -30,7 +30,7 @@
         <% heavy.weapons.forEach(w => { %>
             <li class="weapon">
                 <a href="/weapons/<%= w.name %>">
-                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= encodeURIComponent(w.name)%>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>
@@ -42,7 +42,7 @@
         <% medium.weapons.forEach(w => { %>
             <li class="weapon">
                 <a href="/weapons/<%= w.name %>">
-                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= encodeURIComponent(w.name) %>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>

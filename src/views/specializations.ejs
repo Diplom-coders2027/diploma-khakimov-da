@@ -17,7 +17,7 @@
     <ul class="class_weapons">
         <% light.specializations.forEach(w => { %>
             <li class="weapon">
-                <a href="/specializations/<%= w.name %>">
+                <a href="/specializations/<%= encodeURIComponent(w.name) %>">
                     <img src="<%= w.image %>" alt="<%= w.name %>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
@@ -30,7 +30,7 @@
         <% heavy.specializations.forEach(w => { %>
             <li class="weapon">
                 <a href="/specializations/<%= w.name %>">
-                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= encodeURIComponent(w.name) %>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>
@@ -42,7 +42,7 @@
         <% medium.specializations.forEach(w => { %>
             <li class="weapon">
                 <a href="/specializations/<%= w.name %>">
-                    <img src="<%= w.image %>" alt="<%= w.name %>">
+                    <img src="<%= w.image %>" alt="<%= encodeURIComponent(w.name) %>">
                     <span class="weapon_name"><%= w.name %></span>
                 </a>
             </li>

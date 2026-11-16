@@ -12,6 +12,46 @@
 </head>
 <body>
     <%- include('blocks/header') -%>
-   
+    <h2 class="class_label"><%= light.class %></h2>
+    <% const excluded = ["Flashbang", "Frag Grenade", "Gas Grenade", "Goo Grenade", "Pyro Grenade", "Smoke Grenade","Sonar Grenade"]; %>
+    <% const exluded2 = ["Proximity Sensor","Explosive Mine"]; %>
+    <ul class="class_weapons">
+        <% light.gadgets.forEach(w => { %>
+            <% if (!excluded.includes(w.name)) { %>
+                <li class="weapon">
+                    <a href="/specializations/<%= encodeURIComponent(w.name) %>">
+                        <img src="<%= w.image %>" alt="<%= w.name %>">
+                        <span class="weapon_name"><%= w.name %></span>
+                    </a>
+                </li>
+            <% } %>
+        <% }) %>
+    </ul>
+    <h2 class="class_label"><%= heavy.class %></h2>
+    <ul class="class_weapons">
+        <% heavy.gadgets.forEach(w => { %>
+            <% if (!excluded.includes(w.name) && !exluded2.includes(w.name)) { %>
+                <li class="weapon">
+                    <a href="/specializations/<%= encodeURIComponent(w.name) %>">
+                        <img src="<%= w.image %>" alt="<%= w.name %>">
+                        <span class="weapon_name"><%= w.name %></span>
+                    </a>
+                </li>
+            <% } %>
+        <% }) %>
+    </ul>
+    <h2 class="class_label"><%= medium.class %></h2>
+    <ul class="class_weapons">
+        <% medium.gadgets.forEach(w => { %>
+            <% if (!excluded.includes(w.name) && !exluded2.includes(w.name)) { %>
+                <li class="weapon">
+                    <a href="/specializations/<%= encodeURIComponent(w.name) %>">
+                        <img src="<%= w.image %>" alt="<%= w.name %>">
+                        <span class="weapon_name"><%= w.name %></span>
+                    </a>
+                </li>
+            <% } %>
+        <% }) %>
+    </ul>
 </body>
 </html>
