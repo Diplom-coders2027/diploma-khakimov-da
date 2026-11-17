@@ -7,6 +7,7 @@
   --img-h: 120px;
   --grid-width: 230px;
   --weapon-name-size:25px;
+  --main-title-size:
 }
 
 body {
@@ -17,25 +18,6 @@ body {
   min-height: 300px;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
 }
-
-/* footer {
-  background-color: #18181b;
-  font-size: 15px;
-  position: sticky;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-start;
-  font-family: "Domine";
-  align-items: center;
-  color: white;
-  nav-down: 0;
-  padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-footer p{
-  min-width: 50px;
-} */
 
 header {
   position: sticky;
@@ -50,6 +32,14 @@ header {
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
+}
+
+.main_title{
+  display: flex;
+  font-size: 100px;
+  text-transform: uppercase;
+  justify-content: center;
+  letter-spacing: 2px;
 }
 
 .logo-link {
@@ -134,15 +124,20 @@ nav a:hover,
   justify-content: center;
   transition: transform 0.5s ease-out;   
   margin-bottom: 40px;
-  border: 2px solid transparent;
-  transition: border-color 0.2s;
 }
 
 
 .class_weapons li {
+  --bg: #C58C07;
+  --border:2px solid#C58C07;
+  --text:#fff;
+
   border-radius: 8px;
   overflow: hidden;
-  background: #C58C07;
+  background: var(--bg);
+  border: var(--border);
+  border-radius: 10px;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .class_weapons a {
@@ -166,9 +161,15 @@ nav a:hover,
   text-align: center;      
   font-size: var(--weapon-name-size);
   font-weight: 600;
-  color: whitesmoke;
+  color: var(--text);
   padding: 0 8px;         
   overflow-wrap: anywhere;
+}
+
+.class_weapons li:hover{
+  --bg:#1D1A20;
+  --border:2.5px solid #1D1A20;
+  --text:#F7BB2B;
 }
 
 .class_label {

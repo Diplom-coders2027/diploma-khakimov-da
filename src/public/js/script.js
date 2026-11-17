@@ -12,3 +12,4 @@ dropdownToggle.addEventListener('click', function(e) {
 document.addEventListener('click', function() {
   dropdownMenu.classList.remove('show');
 });
+
