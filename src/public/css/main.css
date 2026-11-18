@@ -7,7 +7,8 @@
   --img-h: 120px;
   --grid-width: 230px;
   --weapon-name-size:25px;
-  --main-title-size:
+  --main-title-size:100px;
+  --class-label-size: 50px;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
   background-color: #F7BB2B;
   color: #1D1A20;
   font-weight: bold;
-  min-height: 300px;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
 }
 
@@ -34,16 +34,8 @@ header {
   margin: 0;
 }
 
-.main_title{
-  display: flex;
-  font-size: 100px;
-  text-transform: uppercase;
-  justify-content: center;
-  letter-spacing: 2px;
-}
-
 .logo-link {
-  display: flex;               /* убирает лишний отступ под картинкой */
+  display: flex;              
 }
 
 .logo {
@@ -52,6 +44,16 @@ header {
   display: block;
 }
 
+/* ОСНОВНОЙ ЗАГАЛОВОК НА ГЛАВНОЙ СТРАНИЦЕ */
+.main_title{
+  display: flex;
+  font-size: var(--main-title-size);
+  text-transform: uppercase;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+/*ДРОПДАУН МЕНЮ */
 nav a,
 .dropdown_toggle {
   text-decoration: none;
@@ -85,8 +87,8 @@ nav a:hover,
   display: none;
   position: absolute;
   top: calc(100% + 12px + var(--header-pad-y));
-  left: 0;                     /* margin-left у кнопки больше нет */
-  min-width: 250px;
+  left: 0;                     
+  min-width: 220px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -113,6 +115,8 @@ nav a:hover,
 .dropdown-menu a:hover {
   color: #F7BB2B;
 }
+
+/* КОЛОНКИ С ПРЕДМЕТАМИ(LOADOUT) */
 
 .class_weapons {
   display: grid;
@@ -152,7 +156,7 @@ nav a:hover,
   border-radius: 5px;
   height: var(--img-h);
   width: var(--img-h);       
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;           
 }
 
@@ -172,47 +176,73 @@ nav a:hover,
   --text:#F7BB2B;
 }
 
+/* НАЗВАНИЯ КЛАССОВ */
 .class_label {
-  font-size: 50px;
+  font-size: var(--class-label-size);
   text-align: center;
   font-style: italic;
   text-transform: uppercase;
 }
 
 
-/* @media (min-width: 1920px) {
+/* ноутбуки ~1600px */
+@media (max-width: 1600px) {
   :root {
-    --nav-font: 22px;
-    --logo-h: 24px;
-    --nav-gap: 28px;
-    --img-h: 63px;
+    --header-pad-x: 36px;
+    --nav-gap: 22px;
+    --nav-font: 30px;
+    --logo-h: 27px;
+    --img-h: 105px;
+    --grid-width: 200px;
+    --weapon-name-size: 22px;
+    --main-title-size: 85px;
+    --class-label-size: 43px;
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px){
-  :root{
-
+/* ноутбуки ~1366px */
+@media (max-width: 1366px) {
+  :root {
+    --header-pad-y: 12px;
+    --header-pad-x: 30px;
+    --nav-gap: 18px;
+    --nav-font: 26px;
+    --logo-h: 24px;
+    --img-h: 90px;
+    --grid-width: 172px;
+    --weapon-name-size: 19px;
+    --main-title-size: 70px;
+    --class-label-size: 36px;
   }
+}
 
-} */
-
-
-/* @media (max-width: 1200px) {
+/* планшеты в альбомной ориентации ~1100px */
+@media (max-width: 1100px) {
   :root {
     --header-pad-x: 24px;
-    --nav-gap: 20px;
-    --img-h: 57px;
+    --nav-gap: 16px;
+    --nav-font: 22px;
+    --logo-h: 22px;
+    --img-h: 80px;
+    --grid-width: 152px;
+    --weapon-name-size: 17px;
+    --main-title-size: 58px;
+    --class-label-size: 30px;
   }
 }
 
-
-@media (max-width: 992px) {
+/* планшеты в портретной ориентации (768–900px), телефоны ниже не трогаем */
+@media (min-width: 768px) and (max-width: 900px) {
   :root {
-    --header-pad-y: 14px;
+    --header-pad-y: 10px;
     --header-pad-x: 20px;
-    --nav-gap: 16px;
-    --nav-font: 18px;
+    --nav-gap: 14px;
+    --nav-font: 20px;
     --logo-h: 20px;
-    --img-h: 53px;
+    --img-h: 70px;
+    --grid-width: 136px;
+    --weapon-name-size: 15px;
+    --main-title-size: 48px;
+    --class-label-size: 26px;
   }
-} */
+}
