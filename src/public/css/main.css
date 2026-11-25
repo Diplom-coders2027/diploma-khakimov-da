@@ -1,18 +1,27 @@
 :root {
-  --header-pad-y: 12px;
-  --header-pad-x: 32px;
+  --header-pad-y: 15px;
+  --header-pad-x: 45px;
   --nav-gap: 24px;
-  --nav-font: 22px;
-  --logo-h: 22px;
-  --img-h: 60px;
-  --grid-width: 140px;
+  --nav-font: 35px;
+  --logo-h: 30px;
+  --img-h: 120px;
+  --grid-width: 230px;
+  --weapon-name-size:25px;
+  --main-title-size:100px;
+  --class-label-size: 50px;
 }
 
 body {
   margin: 0;
-  background-color: #d21f3c;
+  background-color: #F7BB2B;
+  color: #1D1A20;
   font-weight: bold;
   font-family: "Saira Extra Condensed", "Nunito", "Saira", system-ui, -apple-system, sans-serif;
+}
+
+button{
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 header {
@@ -23,16 +32,15 @@ header {
   justify-content: flex-start;
   align-items: center;
   gap: var(--nav-gap);
-  /* на очень широких экранах контент ограничивается ~1400px по центру */
   padding: var(--header-pad-y) max(var(--header-pad-x), calc((100% - 1800px) / 2));
-  background: black;
-  color: #fff;
+  background: #1D1A20;
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
 .logo-link {
-  display: flex;               /* убирает лишний отступ под картинкой */
+  display: flex;              
 }
 
 .logo {
@@ -41,6 +49,16 @@ header {
   display: block;
 }
 
+/* ОСНОВНОЙ ЗАГАЛОВОК НА ГЛАВНОЙ СТРАНИЦЕ */
+.main_title{
+  display: flex;
+  font-size: var(--main-title-size);
+  text-transform: uppercase;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+/*ДРОПДАУН МЕНЮ */
 nav a,
 .dropdown_toggle {
   text-decoration: none;
@@ -63,7 +81,7 @@ nav a,
 
 nav a:hover,
 .dropdown_toggle:hover {
-  color: #d21f3c;
+  color: #F7BB2B;
 }
 
 .dropdown {
@@ -74,8 +92,8 @@ nav a:hover,
   display: none;
   position: absolute;
   top: calc(100% + 12px + var(--header-pad-y));
-  left: 0;                     /* margin-left у кнопки больше нет */
-  min-width: 180px;
+  left: 0;                     
+  min-width: 220px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -100,71 +118,199 @@ nav a:hover,
 }
 
 .dropdown-menu a:hover {
-  color: #d21f3c;
+  color: #F7BB2B;
 }
 
-.light_weapons a{
-  display: block;
-}
+/* КОЛОНКИ С ПРЕДМЕТАМИ(LOADOUT) */
 
-.light_weapons img{
-  border-radius: 5px;
-  height: var(--img-h);
-  display: block; 
-}
-
-
-.light_weapons li{
-  border-radius: 8px;
-  overflow: hidden;
-  background: #cfd8dc;
-}
-
-.light_weapons{
+.class_weapons {
   display: grid;
   grid-template-columns: repeat(3, var(--grid-width));
-  gap: 5px;
-  list-style: none;   /* убрать маркеры списка */
+  gap: 10px;
+  list-style: none;
   margin: 0;
   padding: 0;
   justify-content: center;
-  transition: transform 0.5 ease-out;
+  transition: transform 0.5s ease-out;   
+  margin-bottom: 40px;
 }
 
 
-.light_label{
+.class_weapons li {
+  --bg: #C58C07;
+  --border:2px solid#C58C07;
+  --text:#fff;
+
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  border: var(--border);
+  border-radius: 10px;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.class_weapons a {
+  display: flex;           
+  align-items: center;     
+  gap: 12px;                
+  text-decoration: none;
+  color: inherit;
+}
+
+.class_weapons img {
+  border-radius: 5px;
+  height: var(--img-h);
+  width: var(--img-h);       
+  object-fit: contain;
+  flex-shrink: 0;           
+}
+
+.weapon_name {
+  flex: 1;                 
+  text-align: center;      
+  font-size: var(--weapon-name-size);
+  font-weight: 600;
+  color: var(--text);
+  padding: 0 8px;         
+  overflow-wrap: anywhere;
+}
+
+.class_weapons li:hover{
+  --bg:#1D1A20;
+  --border:2.5px solid #1D1A20;
+  --text:#F7BB2B;
+}
+
+/* НАЗВАНИЯ КЛАССОВ */
+.class_label {
+  font-size: var(--class-label-size);
   text-align: center;
   font-style: italic;
   text-transform: uppercase;
 }
 
-/* ===== Большие мониторы (от 1920px) ===== */
-@media (min-width: 1920px) {
+.build {
+  display: grid;
+  grid-template-columns: 1fr 5fr 4fr;   /* класс | основные | резерв */
+  gap: 30px;
+  align-items: start;                   /* чтобы блоки не растягивались по высоте */
+  padding: 0 var(--header-pad-x);
+}
+
+.build_slots {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.build_main    { --cols: 5; }
+.build_reserve { --cols: 4; }
+
+/* сам слот */
+.slot {
+  width: 100%;
+  aspect-ratio: 1 / 1;          /* квадрат; под ваши иконки можно 4 / 3 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+   background: linear-gradient(
+    135deg,
+    #6E7480 0%,
+    #C9CED6 25%,
+    #FFFFFF 45%,
+    #E8EBEF 80%,
+    #7A808C 100%
+  );
+  border: 2px solid #C58C07;
+  border-radius: 10px;
+  color: #1D1A20;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.slot:hover:not(:disabled) {
+  background: #1D1A20;
+  border-color: #1D1A20;
+  color: #F7BB2B;
+}
+
+.slot:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* картинка внутри выбранного слота */
+.slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* иконка целиком, без обрезки */
+}
+
+/* ноутбуки ~1600px */
+@media (max-width: 1600px) {
   :root {
-    --nav-font: 22px;
-    --logo-h: 24px;
-    --nav-gap: 28px;
-    --img-h: 63px;
+    --header-pad-x: 36px;
+    --nav-gap: 22px;
+    --nav-font: 30px;
+    --logo-h: 27px;
+    --img-h: 105px;
+    --grid-width: 200px;
+    --weapon-name-size: 22px;
+    --main-title-size: 85px;
+    --class-label-size: 43px;
   }
 }
 
-/* ===== Ноутбуки (до 1200px) ===== */
-@media (max-width: 1200px) {
+/* ноутбуки ~1366px */
+@media (max-width: 1366px) {
+  :root {
+    --header-pad-y: 12px;
+    --header-pad-x: 30px;
+    --nav-gap: 18px;
+    --nav-font: 26px;
+    --logo-h: 24px;
+    --img-h: 90px;
+    --grid-width: 172px;
+    --weapon-name-size: 19px;
+    --main-title-size: 70px;
+    --class-label-size: 36px;
+  }
+}
+
+/* планшеты в альбомной ориентации ~1100px */
+@media (max-width: 1100px) {
   :root {
     --header-pad-x: 24px;
-    --nav-gap: 20px;
-    --img-h: 57px;
+    --nav-gap: 16px;
+    --nav-font: 22px;
+    --logo-h: 22px;
+    --img-h: 80px;
+    --grid-width: 152px;
+    --weapon-name-size: 17px;
+    --main-title-size: 58px;
+    --class-label-size: 30px;
   }
 }
 
-/* ===== Планшеты (до 992px) ===== */
-@media (max-width: 992px) {
+/* планшеты в портретной ориентации (768–900px), телефоны ниже не трогаем */
+@media (min-width: 768px) and (max-width: 900px) {
   :root {
-    --header-pad-y: 14px;
+    --header-pad-y: 10px;
     --header-pad-x: 20px;
-    --nav-gap: 16px;
-    --nav-font: 18px;
+    --nav-gap: 14px;
+    --nav-font: 20px;
     --logo-h: 20px;
-    --img-h: 53px;
+    --img-h: 70px;
+    --grid-width: 136px;
+    --weapon-name-size: 15px;
+    --main-title-size: 48px;
+    --class-label-size: 26px;
   }
 }
