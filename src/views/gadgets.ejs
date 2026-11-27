@@ -19,7 +19,7 @@
         <% light.gadgets.forEach(w => { %>
             <% if (!excluded.includes(w.name) && !w.name.includes("Sonar Grenade")) { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>
@@ -32,7 +32,7 @@
         <% heavy.gadgets.forEach(w => { %>
             <% if (!excluded.includes(w.name) && !exluded2.includes(w.name)) { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>
@@ -43,9 +43,9 @@
     <h2 class="class_label"><%= medium.class %></h2>
     <ul class="class_weapons">
         <% medium.gadgets.forEach(w => { %>
-            <% if (!excluded.includes(w.name) && !exluded2.includes(w.name)) { %>
+            <% if (!excluded.includes(w.name) && !exluded2.includes(w.name) && w.name != 'Sonar Grenade') { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>
@@ -58,7 +58,7 @@
         <% medium.gadgets.forEach(w => { %>
             <% if (exluded2.includes(w.name)) { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>
@@ -71,7 +71,7 @@
         <% medium.gadgets.forEach(w => { %>
             <% if (w.name.includes("Sonar Grenade")) { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>
@@ -84,7 +84,7 @@
         <% medium.gadgets.forEach(w => { %>
             <% if (excluded.includes(w.name)) { %>
                 <li class="weapon">
-                    <a href="/gadgets/<%= encodeURIComponent(w.name) %>">
+                    <a href="/<%= slugify(w.name) %>">
                         <img src="<%= w.image %>" alt="<%= w.name %>">
                         <span class="weapon_name"><%= w.name %></span>
                     </a>

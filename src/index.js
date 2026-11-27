@@ -12,6 +12,14 @@ app.get('/', (req,res) => {
     res.render('index')
 })
 
+const slugify = (str) =>
+  str
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
+app.locals.slugify = slugify
 
 const cache = new Map();
 async function loadJson(name) {
@@ -36,6 +44,7 @@ const page = (view, files) => async (req, res, next) => {
     next(err);
   }
 };
+
 
 
 app.get('/weapons', page('weapons', ['heavy', 'light', 'medium']));
